@@ -18,11 +18,11 @@ const offsetUV = `
 `;
 
 export const vertexShader = `
+
+
     precision mediump float;
     precision mediump int;
     precision mediump int;
-
-    uniform float time;
 
     uniform mat4 modelViewMatrix;
     uniform mat4 projectionMatrix;
@@ -32,15 +32,15 @@ export const vertexShader = `
     attribute vec2 uv;
 
     varying vec2 vUv;
-    varying vec3 vWorldPosition;
 
     void main()	{
-        vec4 tmpPosition = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
-        gl_Position = tmpPosition;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
         vUv = uv;
     }
+
+    
 `;
 
 
