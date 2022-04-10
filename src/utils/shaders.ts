@@ -56,10 +56,7 @@ export const fragmentShader = `
     uniform Layer textureLayer02;
     uniform float time;
 
-    uniform mat4 modelViewMatrix;
-
     varying vec2 vUv;
-    varying vec3 vWorldPosition;
 
     `
 
